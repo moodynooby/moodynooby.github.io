@@ -1,154 +1,138 @@
-<title>Judgement Game</title> <style> body { background-color: #282828; /* Very dark gray */ color: #D9CAB3; /* Light brown for text */ }
+</head>
 
-  .player {
-    background-color: #5D4037;
-    /* Dark brown */
-    color: #F7F3E8;
-    /* Off-white for text inside the boxes */
-    font-family: Poppins;
-  
-    /* Add any other styling you want for the boxes */
-    
-  }
-  
-  .player {
-    width: 400px;
-    height: 200px;
-    border: 1px solid black;
-    float: left;
-    margin: 10px;
-    text-align: center;
-    padding: 10px;
-    font: 20px Poppins;
-  }
-  
-  .player-name {
-    font-weight: bold;
-    font: 50px Poppins;
-  }
-  
-  </style> <style> .button { position: relative; background-color: #04AA6D; border: none; font-size: 20px; /* Increased font size */ color: #FFFFFF; padding: 20px; width: 100px; text-align: center; border-radius: 20px; /* Added rounded corners */ transition-duration: 0.4s; text-decoration: none; overflow: hidden; cursor: pointer; }
-  
-  .button:after {
-    content: "";
-    background: #f1f1f1;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
-  }
-  
-  .button:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
-  }
-  
-  </style> <script>let score1 = 0; let hand1 = 0; </script>
-  Judgement Game
-  Manas
-  <script>document.getElementById('score1Display').textContent = score1</script>
-  
-  <div class="hand-container">
-    <div id="hand1Display">0</div>
-  </div>
-  
-  <button class="button" float="left"
-    onclick="hand1++; document.getElementById('hand1Display').textContent = hand1;">+</button>
-  <button class="button" float="left"
-    onclick="hand1--; document.getElementById('hand1Display').textContent = hand1;">-</button>
-  <button class="button" float="center" onclick="point1()">\o/</button>
-  
-  <script>
-  
-  function point1() {
-    hand1 = 0;
-    if (hand1 == 0) {
-      score1 += 10; // Add 10 to score1
-    } else {
-      score1 += hand1 * 10; // Add hand1 * 10 to score1
-    }
-    document.getElementById("score1Display").textContent = score1; // Update display
-  }
-  
-  </script> <script>let score2 = 0; let hand2 = 0; </script>
-  Fagun
-  <script>document.getElementById('score2Display').textContent = score2</script>
-  
-  <div class="hand-container">
-    <div id="hand2Display">0</div>
-  </div>
-  
-  <button class="button" float="left"
-    onclick="hand2++; document.getElementById('hand2Display').textContent = hand2;">+</button>
-  <button class="button" float="left"
-    onclick="hand2--; document.getElementById('hand2Display').textContent = hand2;">-</button>
-  <button class="button" float="center" onclick="point2()">\o/</button>
-  
-  <script>
-  
-  function point2() {
-    if (hand2 == 0) {
-      score2 += 10; // Add 10 to score2
-    } else {
-      score2 += hand2 * 10; // Add hand2 * 10 to score2
-    }
-    document.getElementById("score2Display").textContent = score2; // Update display
-  }
-  
-  </script> <script>let score3 = 0; let hand3 = 0; </script>
-  Ghanshyam
-  <script>document.getElementById('score3Display').textContent = score3</script>
-  
-  <div class="hand-container">
-    <div id="hand3Display">0</div>
-  </div>
-  
-  <button class="button" float="left"
-    onclick="hand3++; document.getElementById('hand3Display').textContent = hand3;">+</button>
-  <button class="button" float="left"
-    onclick="hand3--; document.getElementById('hand3Display').textContent = hand3;">-</button>
-  <button class="button" float="center" onclick="point3()">\o/</button>
-  
-  <script>
-  
-  function point3() {
-    if (hand3 == 0) {
-      score3 += 10; // Add 10 to score3
-    } else {
-      score3 += hand3 * 10; // Add hand3 * 10 to score3
-    }
-    document.getElementById("score3Display").textContent = score3; // Update display
-  }
-  
-  </script> <script>let score4 = 0; let hand4 = 0; </script>
-  Jashmin
-  <script>document.getElementById('score4Display').textContent = score4</script>
-  
-  <div class="hand-container">
-    <div id="hand4Display">0</div>
-  </div>
-  
-  <button class="button" float="left"
-    onclick="hand4++; document.getElementById('hand4Display').textContent = hand4;">+</button>
-  <button class="button" float="left"
-    onclick="hand4--; document.getElementById('hand4Display').textContent = hand4;">-</button>
-  <button class="button" float="center" onclick="point4()">\o/</button>
-  
-  <script>
-  
-  function point4() {
-    if (hand4 == 0) {
-      score4 += 10; // Add 10 to score4
-    } else {
-      score4 += hand4 * 10; // Add hand4 * 10 to score4
-    }
-    document.getElementById("score4Display").textContent = score4; // Update display
-  }
-  
+<body>
+  <script>let score1 = 0;
+    let hand1 = 0;
+
   </script>
+  <h1>Judgement Game</h1>
+  <div class="player">
+    <div class="player-name">Manas</div>
+    <div id="score1Display">
+      <script>document.getElementById('score1Display').textContent = score1</script>
+    </div>
+
+    <div class="hand-container">
+      <div id="hand1Display">0</div>
+    </div>
+
+    <button class="button" float="left"
+      onclick="hand1++; document.getElementById('hand1Display').textContent = hand1;">+</button>
+    <button class="button" float="left"
+      onclick="hand1--; document.getElementById('hand1Display').textContent = hand1;">-</button>
+    <button class="button" float="center" onclick="point1()">\o/</button>
+
+  </div>
+  <script>
+
+    function point1() {
+      if (hand1 == 0) {
+        score1 += 10; // Add 10 to score1
+      } else {
+        score1 += hand1 * 10; // Add hand1 * 10 to score1
+      }
+      document.getElementById("score1Display").textContent = score1; // Update display
+    }
+  </script>
+  <script>let score2 = 0;
+    let hand2 = 0;
+
+  </script>
+  <div class="player">
+    <div class="player-name">Fagun</div>
+    <div id="score2Display">
+      <script>document.getElementById('score2Display').textContent = score2</script>
+    </div>
+
+    <div class="hand-container">
+      <div id="hand2Display">0</div>
+    </div>
+
+    <button class="button" float="left"
+      onclick="hand2++; document.getElementById('hand2Display').textContent = hand2;">+</button>
+    <button class="button" float="left"
+      onclick="hand2--; document.getElementById('hand2Display').textContent = hand2;">-</button>
+    <button class="button" float="center" onclick="point2()">\o/</button>
+
+  </div>
+  <script>
+
+    function point2() {
+      if (hand2 == 0) {
+        score2 += 10; // Add 10 to score2
+      } else {
+        score2 += hand2 * 10; // Add hand2 * 10 to score2
+      }
+      document.getElementById("score2Display").textContent = score2; // Update display
+    }
+  </script>
+
+  <script>let score3 = 0;
+    let hand3 = 0;
+
+  </script>
+  <div class="player">
+    <div class="player-name">Ghanshyam</div>
+    <div id="score3Display">
+      <script>document.getElementById('score3Display').textContent = score3</script>
+    </div>
+
+    <div class="hand-container">
+      <div id="hand3Display">0</div>
+    </div>
+
+    <button class="button" float="left"
+      onclick="hand3++; document.getElementById('hand3Display').textContent = hand3;">+</button>
+    <button class="button" float="left"
+      onclick="hand3--; document.getElementById('hand3Display').textContent = hand3;">-</button>
+    <button class="button" float="center" onclick="point3()">\o/</button>
+
+  </div>
+  <script>
+
+    function point3() {
+      if (hand3 == 0) {
+        score3 += 10; // Add 10 to score3
+      } else {
+        score3 += hand3 * 10; // Add hand3 * 10 to score3
+      }
+      document.getElementById("score3Display").textContent = score3; // Update display
+    }
+  </script>
+
+  <script>let score4 = 0;
+    let hand4 = 0;
+
+  </script>
+  <div class="player">
+    <div class="player-name">Jashmin </div>
+    <div id="score4Display">
+      <script>document.getElementById('score4Display').textContent = score4</script>
+    </div>
+
+    <div class="hand-container">
+      <div id="hand4Display">0</div>
+    </div>
+
+    <button class="button" float="left"
+      onclick="hand4++; document.getElementById('hand4Display').textContent = hand4;">+</button>
+    <button class="button" float="left"
+      onclick="hand4--; document.getElementById('hand4Display').textContent = hand4;">-</button>
+    <button class="button" float="center" onclick="point4()">\o/</button>
+
+  </div>
+  <script>
+
+    function point4() {
+      if (hand4 == 0) {
+        score4 += 10; // Add 10 to score4
+      } else {
+        score4 += hand4 * 10; // Add hand4 * 10 to score4
+      }
+      document.getElementById("score4Display").textContent = score4; // Update display
+    }
+  </script>
+  
+</body>
+
+</html>
