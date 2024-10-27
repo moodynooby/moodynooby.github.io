@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <title>Judgement Game</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,11 +13,11 @@
       background-color:  #1c1b22 ; /* Very dark gray */
       color: #D9CAB3; /* Light brown for text */
     }
-
+    .container{      font-family: Zilla Slab;
+    }
     .player {
       background-color: #5b5b66; /* Dark brown */
       color: #F7F3E8; /* Off-white for text inside the boxes */
-      font-family: Poppins;
       width: 400px;
       height: 200px;
       border: 1px solid black;
@@ -26,13 +29,12 @@
     }
 
     .player-name {
-      font-weight: bold;
       font-size: 50px;
     }
 
-    .button {
+    .button  {
       position: relative;
-      background-color: #04AA6D;
+      background-color:  #2b2a33 ;
       border: none;
       font-size: 20px;
       color: #FFFFFF;
@@ -67,8 +69,8 @@
     }
   </style>
 </head>
-<body class="bg-dark text-light"> <div class="container">
-  <h1>Judgement Game</h1>
+<body class="bg-dark text-light" > <div class="container">
+  <h1 >Judgement Game</h1>
 
   <div class="row">
     <div class="col-md-6">
@@ -78,7 +80,7 @@
         <div class="container text-center">
           <div id="hand1Display">0</div>
         </div>
-        <button class="button" onclick="hand1++; document.getElementById('hand1Display').textContent = hand1;">+</button>
+        <button type="button" class="button btn-outline-primary" onclick="hand1++; document.getElementById('hand1Display').textContent = hand1;" >+</button>
         <button class="button" onclick="hand1--; document.getElementById('hand1Display').textContent = hand1;">-</button>
         <button class="button" onclick="point1()">\o/</button>
       </div>
